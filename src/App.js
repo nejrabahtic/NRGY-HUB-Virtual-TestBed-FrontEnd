@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Group 5 is really good.
+          Group 5 is really good amd awesome.
         </p>
         <Button type="primary">Button</Button>
       </header>

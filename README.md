@@ -1,4 +1,4 @@
-## NRGY HUB Virtual TestBed 
+## NRGY HUB Virtual TestBed FrontEnd 
 
 Front-End app running on localhost:3000
 

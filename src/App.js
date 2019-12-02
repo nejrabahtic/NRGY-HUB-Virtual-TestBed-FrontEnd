@@ -1,20 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+//import React from 'react';
 import './App.css';
 import Button from 'antd/es/button';
+/////////
+import React,{Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Group 5 is really good amd awesome.
-        </p>
-        <Button type="primary">Button</Button>
-      </header>
+class App extends Component{
+  render(){
+    return(
+      <div className="App">
+        <div className="App__Aside"></div>
+        <div className="App__Form">
+          <div className="FormTitle">
+            <a href="#" className="FormTitle__Link">Sign In</a>or <a href="#"
+            className="FormTitle__Link FormTitle__Link--Active">Sign Up</a>
+          </div>
+
+          <div className="FormCenter">
+            <form className="FormFields" onSubmit={this.handleSubmit}>
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="name">Username</label>
+                <input type="text" id="name" className="FormField__Input" placeholder="Enter your username" name="name"/>
+                
+              </div>
+            </form>
+          </div>
+        </div>
     </div>
-  );
+    )
+  }
 }
 
 export default App;

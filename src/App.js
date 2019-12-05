@@ -20,7 +20,14 @@ class App extends Component{
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="name">Username</label>
                 <input type="text" id="name" className="FormField__Input" placeholder="Enter your username" name="name"/>
-                
+              </div>
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="email">Email Address</label>
+                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email"/>
+              </div>
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="password">Password</label>
+                <input type="password" id="password" className="FormField__Input" placeholder="Enter Password" name="password"/>
               </div>
             </form>
           </div>

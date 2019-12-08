@@ -1,42 +1,9 @@
 .App {
   height: 100vh;
   display: flex;
-  /*color: white;*/
-  color: pink;
+  color: white;
 }
 
-/*Här testade jag med Floating-label, har ej fått till det ej*/
-/*.floating-label-field {
-  border-width: 0;
-  color: rgba(44, 62, 80, 0.75);
-}
-.floating-label-field:focus {
-  outline: 0;
-  box-shadow: 0;
-}
-.floating-label-field::placeholder {
-  color: transparent;
-}
-.floating-label-field, .floating-label-field + .floating-label {
-  line-height: 1;
-  font: inherit;
-  padding: 1.5em;
-  height: 4em;
-}
-.floating-label-field + .floating-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  user-select: none;
-}
-.floating-label-field, .floating-label-field + .floating-label {
-  position: relative;
-}
-.floating-label-field {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.05);
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.75);
-}*/
 
 .App__Aside {
   width: 50%;
@@ -68,20 +35,19 @@ filter:blur(0px);
   overflow: auto;
   z-index: 10; /* får skarp kant mellan höger och vänster sida */
 }
-/*halva sidan*/
+/*the right side*/
 .FormCenter {
   margin-bottom: 100px;
+  position: absolute;
+  margin-left: 6em;
 }
-/**/
-.FormCenter input{
-  
-}
-/**/
+
 .FormTitle {
   color: #707C8B;
   font-weight: 300;
   margin-bottom: 50px;
   margin-top: 20%;
+  margin-left: 6em;
 }
 
 .FormTitle__Link {
@@ -104,13 +70,18 @@ filter:blur(0px);
 
 .FormField {
   margin-bottom: 40px;
+  position: relative;
 }
 
+
 .FormField__Label {
-  display: block;
-  /*text-transform: uppercase;*/
-  font-size: .9em;
+  font-size: 1em;
   color: white;
+  position: absolute;
+  pointer-events: none;
+  transition: .5s;
+  left:0;
+  top:10px;
 }
 .FormField__Input {
   width: 85%;
@@ -124,11 +95,30 @@ filter:blur(0px);
   padding-bottom: 10px;
   margin-top: 10px;
 }
-
-.FormField__Input::placeholder {
-  color: #616E7F; 
+/*The animation*/
+.FormField__Input:focus ~ label{
+  top: -12px;
+  left: 0;
+  color: #616E7F;
+  font-size: 0.8em;
+  font-weight: bold;
 }
-
+.FormField__Input:focus{
+  border-bottom: 1px solid rgb(114, 181, 76);
+}
+/*funkar inte- ska stanna uppe(valid som blir fel)*/
+/*.FormField__Input:valid ~ label{
+  top: -12px;
+  left: 0;
+  color: #616E7F;
+  font-size: 12px;
+  font-weight: bold;
+}*/
+/*För att det ska bli grönt när man skrivit in- funkar ej(valid)*/
+/*.FormField__Input:valid{
+  border-bottom: 1px solid rgb(114, 181, 76);
+}
+*/
 .FormField__Button {
   background-color: rgb(114, 181, 76);
   color: white;
@@ -136,7 +126,7 @@ filter:blur(0px);
   outline: none;
   border-radius: 25px;
   padding: 15px 70px;
-  font-size: .8em;
+  font-size: 1em;
   font-weight: 500;
 }
 
@@ -167,42 +157,3 @@ filter:blur(0px);
   margin-left: 5px;
 } */
 
-/*Bara prov nedan*/
-.box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 400px;
-  background: #fff;
-  padding: 40px;
-  box-sizing: border-box;
-  border: 1px solid rgba(0,0,0,.1);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
-.box input { 
-  padding: 10px 0;
-  margin-bottom:30px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: none;
-  outline: none;
-  border:none;
-  border-bottom: 2px solid #999;
-}
-.box form div{
-  position: relative;
-}
-.box form div label{
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  left: 0;
-  pointer-events: none;
-  color: #999;
-  transition: .5s;
-}
-
-.box input:focus ~ label {
-  top:-12px;
-}

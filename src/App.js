@@ -14,7 +14,9 @@ class App extends Component{
       <Router basename="/react-auth-ui/">
         <div className="App">
           <div className="App__Aside">
-            <div className="InfoText"> Welcome </div>
+            <div className="InfoText"> 
+            <span>Welcome<span id="InfoTextUnder"><br/>to<br/>NRGY HUB virtual testbed</span></span>
+            </div>
           </div>
           <div className="App__Form">
             {/* <div className="PageSwitcher">

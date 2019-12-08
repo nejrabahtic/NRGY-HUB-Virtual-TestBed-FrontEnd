@@ -8,25 +8,38 @@
 .App__Aside {
   width: 50%;
   /*background-color: #66DAC7;*/
-  background-image: url("/images/Vasteras_1.jpg");
+  background-image: url("/images/Vasteras_1_blur.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  transform: scale(1.1); /* scalar med 10% */
-  filter:blur(4.5px);
+ /*  transform: scale(1.1); /* scalar med 10% */
+  /*filter:blur(4.5px);
   -webkit-filter:blur(5px);
-  -moz-filter:blur(5px);
+  -moz-filter:blur(5px); */
 }
 
 .InfoText{
-/* position: absolute; */
-text-decoration-color: whitesmoke;
-transform: scale(0); /* scalar med 10% */
+text-align: center;
+font-size: 100px;
+position: relative;
+transform: translateY(-90%);
+top:50%;
+font-weight: 500;
+line-height: 65px;
+text-shadow:1px 1px 1px rgb(102, 102, 102);
+/*transform: scale(0);
 filter:blur(0px);
 -webkit-filter:blur(0px);
--moz-filter:blur(0px);
-
+-moz-filter:blur(0px); */
 }
+
+#InfoTextUnder{
+  font-size: 60px;
+  
+}
+
+
+
 
 .App__Form {
   width: 50%;

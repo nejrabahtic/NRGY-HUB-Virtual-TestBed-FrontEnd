@@ -5,10 +5,60 @@
   color: pink;
 }
 
+/*Här testade jag med Floating-label, har ej fått till det ej*/
+/*.floating-label-field {
+  border-width: 0;
+  color: rgba(44, 62, 80, 0.75);
+}
+.floating-label-field:focus {
+  outline: 0;
+  box-shadow: 0;
+}
+.floating-label-field::placeholder {
+  color: transparent;
+}
+.floating-label-field, .floating-label-field + .floating-label {
+  line-height: 1;
+  font: inherit;
+  padding: 1.5em;
+  height: 4em;
+}
+.floating-label-field + .floating-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+}
+.floating-label-field, .floating-label-field + .floating-label {
+  position: relative;
+}
+.floating-label-field {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.75);
+}*/
+
 .App__Aside {
   width: 50%;
-  background-color: #66DAC7;
-  /*background-image: 'vasteras.jpg';*/
+  /*background-color: #66DAC7;*/
+  background-image: url("/images/Vasteras_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  transform: scale(1.1); /* scalar med 10% */
+  filter:blur(4.5px);
+  -webkit-filter:blur(5px);
+  -moz-filter:blur(5px);
+}
+
+.InfoText{
+/* position: absolute; */
+text-decoration-color: whitesmoke;
+transform: scale(0); /* scalar med 10% */
+filter:blur(0px);
+-webkit-filter:blur(0px);
+-moz-filter:blur(0px);
+
 }
 
 .App__Form {
@@ -16,6 +66,7 @@
   background-color: rgb(49, 49, 49);    
   padding: 25px 40px;
   overflow: auto;
+  z-index: 10; /* får skarp kant mellan höger och vänster sida */
 }
 /*halva sidan*/
 .FormCenter {
@@ -48,7 +99,7 @@
 
 .FormTitle__Link--Active {
   color: white;
-  border-bottom: 1px solid #199087;
+  border-bottom: 1px solid rgb(114, 181, 76);
 }
 
 .FormField {
@@ -75,11 +126,11 @@
 }
 
 .FormField__Input::placeholder {
-  color: #616E7F;
+  color: #616E7F; 
 }
 
 .FormField__Button {
-  background-color: #52C4B9;
+  background-color: rgb(114, 181, 76);
   color: white;
   border: none;
   outline: none;
@@ -93,11 +144,11 @@
   color: #66707D;
   text-decoration: none;
   display: inline-block;
-  border-bottom: 1.5px solid #225E62;
+  border-bottom: 1.5px solid rgb(114, 181, 76);
   padding-bottom: 5px;
 }
 
-.FormField__CheckboxLabel {
+/* .FormField__CheckboxLabel {
   color: #646F7D;
   font-size: .9em;
 }
@@ -114,7 +165,7 @@
   display: inline-block;
   padding-bottom: 2px;
   margin-left: 5px;
-}
+} */
 
 /*Bara prov nedan*/
 .box{

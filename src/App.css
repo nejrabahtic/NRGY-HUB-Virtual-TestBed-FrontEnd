@@ -82,7 +82,7 @@ filter:blur(0px);
 }
 
 .FormField {
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   position: relative;
 }
 
@@ -97,7 +97,7 @@ filter:blur(0px);
   top:10px;
 }
 .FormField__Input {
-  width: 85%;
+  width: 18em;
   background-color: transparent;
   border: none;
   color: white;
@@ -130,15 +130,16 @@ filter:blur(0px);
 /*För att det ska bli grönt när man skrivit in- funkar ej(valid)*/
 /*.FormField__Input:valid{
   border-bottom: 1px solid rgb(114, 181, 76);
-}
-*/
+}*/
+
 .FormField__Button {
   background-color: rgb(114, 181, 76);
   color: white;
   border: none;
   outline: none;
   border-radius: 25px;
-  padding: 15px 70px;
+  /*padding: 15px 70px;*/   /*short button*/
+  padding: 15px 115px;
   font-size: 1em;
   font-weight: 500;
 }
@@ -149,6 +150,9 @@ filter:blur(0px);
   display: inline-block;
   border-bottom: 1.5px solid rgb(114, 181, 76);
   padding-bottom: 5px;
+  position: relative;
+  top: 47px;
+  right: 14em;
 }
 
 /* .FormField__CheckboxLabel {

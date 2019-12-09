@@ -7,7 +7,7 @@ class SignUpForm extends Component {
         <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields">
               <div className="FormField">
-                <input type="text" id="name" className="FormField__Input" name="name"/*  value={this.state.name} onChange={this.handleChange} */ />
+                <input type="text" id="name" className="FormField__Input"/* value={this.state.name} onChange={this.handleChange}*/ />
                 <label className="FormField__Label" htmlFor="name">Username</label>
               </div>
               <div className="FormField">

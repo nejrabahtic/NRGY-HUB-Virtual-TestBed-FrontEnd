@@ -5,6 +5,8 @@ import React,{Component} from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
+import MapPage from './pages/MapPage';
+import { V4MAPPED } from 'dns';
 
 
 class App extends Component{
@@ -30,6 +32,8 @@ class App extends Component{
               <Route exact path="/" component={SignUpForm}>
               </Route>
               <Route path="/sign-in" component={SignInForm}>
+              </Route>
+              <Route path="/map" component={MapPage}>
               </Route>
           </div>
 

@@ -23,7 +23,7 @@ text-align: center;
 font-size: 100px;
 position: relative;
 transform: translateY(-90%);
-top:50%;
+top:60%;
 font-weight: 500;
 line-height: 65px;
 text-shadow:1px 1px 1px rgb(102, 102, 102);
@@ -52,22 +52,23 @@ filter:blur(0px);
 .FormCenter {
   margin-bottom: 100px;
   position: absolute;
-  margin-left: 6em;
+  margin-left: 20em;
+  top:20em;
 }
 
 .FormTitle {
   color: #707C8B;
   font-weight: 300;
   margin-bottom: 50px;
-  margin-top: 20%;
-  margin-left: 6em;
+  margin-top: 23%;
+  margin-left: 19em;
 }
 
 .FormTitle__Link {
   color: #707C8B;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.7em;
+  font-size: 2.7em;
   margin: 0 10px;
   padding-bottom: 5px;
 }
@@ -88,7 +89,7 @@ filter:blur(0px);
 
 
 .FormField__Label {
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
   position: absolute;
   pointer-events: none;
@@ -97,7 +98,7 @@ filter:blur(0px);
   top:10px;
 }
 .FormField__Input {
-  width: 18em;
+  width: 20em;
   background-color: transparent;
   border: none;
   color: white;
@@ -113,7 +114,7 @@ filter:blur(0px);
   top: -12px;
   left: 0;
   color: #616E7F;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
 }
 .FormField__Input:focus{
@@ -140,12 +141,12 @@ filter:blur(0px);
   border-radius: 25px;
   /*padding: 15px 70px;*/   /*short button*/
   padding: 15px 115px;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
 .FormField__Link {
-  color: #66707D;
+  color: whitesmoke;
   text-decoration: none;
   display: inline-block;
   border-bottom: 1.5px solid rgb(114, 181, 76);

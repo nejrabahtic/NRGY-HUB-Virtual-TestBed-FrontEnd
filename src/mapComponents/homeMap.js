@@ -1,15 +1,24 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import '../pages/homeMapCmp';
+import React,{Component} from 'react';
+import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
+import homeMapCmp from './pages/homeMapCmp';
+import { V4MAPPED } from 'dns';
 
-const position = [51.505, -0.09]
-const map = (
-  <Map center={position} zoom={13}>
-    <TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-    />
-    <Marker position={position}>
-      <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-    </Marker>
-  </Map>)
+class homeMapCmp extends Component{
+  render(){
+    return(
+      <Router basename="/homeMap/">
+        <head>
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+              crossorigin=""/>
+        </head>
+        <div className="homeMap">
+              <Route path="/homeMap" component={homeMapCmp}>
+              </Route>
+        </div>
+        <div id="homeMap"></div>
+      </Router>
+    )
+  }
+}

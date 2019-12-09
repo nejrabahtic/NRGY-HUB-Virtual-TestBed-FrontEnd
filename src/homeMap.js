@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { render } from 'react-dom'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
@@ -12,4 +12,4 @@ const map = (
     <Marker position={position}>
       <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
     </Marker>
-  </Map>)
+  </Map>)*/

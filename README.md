@@ -1,10 +1,8 @@
 ## NRGY HUB Virtual TestBed FrontEnd 
 
-Front-End app running on localhost:3000
+### Software Engineering 2, Project for Future Energy Center, MDH
 
-Software Engineering 2, Project for Future Energy Center, MDH
-
-Team members:
+### Team members
   - Donatello Piancazzo 
   - Nejra Bahtić 
   - Andrés Ramos Segui
@@ -14,6 +12,15 @@ Team members:
   - Oskar Berglund
   - Muhammad Tariq
   
-Requirements:
+#### Requirements
 - Node 8.16.0 or Node 10.16.0 or later version
 - npm 5.2+ version
+
+### Steps for starting the project
+  ```
+  cloning the repository 
+  open the repository some text editor, we suggest to use Visual Studio Code
+  install the dependencies with npm install in the folder of repository
+  run project with npm start 
+  ```
+The app will be running on localhost:3000.

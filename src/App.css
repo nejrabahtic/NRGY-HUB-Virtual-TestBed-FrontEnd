@@ -60,7 +60,7 @@ filter:blur(0px);
   color: #707C8B;
   font-weight: 300;
   margin-bottom: 50px;
-  margin-top: 25%;
+  margin-top: 23%;
   margin-left: 19em;
 }
 
@@ -89,7 +89,7 @@ filter:blur(0px);
 
 
 .FormField__Label {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: white;
   position: absolute;
   pointer-events: none;
@@ -114,7 +114,7 @@ filter:blur(0px);
   top: -12px;
   left: 0;
   color: #616E7F;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
 }
 .FormField__Input:focus{

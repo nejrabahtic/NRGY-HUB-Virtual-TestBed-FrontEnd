@@ -7,6 +7,7 @@ class MainView extends Component {
         return (
             <div>
                 <SideBar/>
+                <NavBar/>
                 <MapView />
                 SOMETHING CRAZY
             </div>

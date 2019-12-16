@@ -1,21 +1,25 @@
-ul{
+ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
+    padding: 5px;
+    overflow: hidden;
+    background-color: rgb(49, 49, 49);
+  }
+li{
+    float: right;
+
 }
 
 li a{
     display: block;
-    color: #000;
-    padding: 8px 16px;
+    color: rgb(255, 255, 255);
+    padding: 8px;
     text-decoration: none;
 }
 
 li a:hover{
-
-}
-.topBar{
-
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(77, 77, 77); /* hover with an underline or background-color? */
+    /* text-decoration: underline; */ /* hover with an underline or background-color? */
 }

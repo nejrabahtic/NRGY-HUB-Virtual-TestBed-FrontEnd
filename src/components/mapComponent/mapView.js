@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
+import NavBar from '../navbar/navbar';
 
 class MapView extends Component {
     constructor() {
@@ -16,6 +17,7 @@ class MapView extends Component {
         const position = [this.state.lat, this.state.lng];
         return (
             <div>
+                <NavBar></NavBar>
                 <Map center={position} zoom={this.state.zoom}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

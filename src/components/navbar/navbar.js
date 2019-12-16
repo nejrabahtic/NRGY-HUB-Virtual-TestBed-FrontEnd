@@ -9,7 +9,7 @@ class NavBar extends Component {
         return (
             <div /* className="topBar" */>
                 <ul>
-                    <li><a href="/sign-in"></a></li>
+                    <li><a href="/#/react-auth-ui/sign-in">Logout</a></li>
                 </ul>
             </div>
         );

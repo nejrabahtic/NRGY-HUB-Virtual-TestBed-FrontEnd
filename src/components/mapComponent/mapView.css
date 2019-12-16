@@ -1,4 +1,5 @@
 .leaflet-container{
-    height: 600px !important;
-    width: 100% !important;
+    height: calc(100vh - 54px) !important;
+    width: calc(100vw - 320px) !important;
+    left: 320px;
 }

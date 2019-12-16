@@ -7,8 +7,8 @@ class SideBar extends Component {
     render() {
 
         return (
-            <div>
-                
+            <div className="sideNav">
+                <h2>Energy:</h2>
             </div>
         );
     }

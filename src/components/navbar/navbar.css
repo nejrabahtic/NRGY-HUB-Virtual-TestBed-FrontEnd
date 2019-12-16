@@ -4,6 +4,7 @@ ul {
     padding: 5px;
     overflow: hidden;
     background-color: rgb(49, 49, 49);
+    font-size: larger;
   }
 li{
     float: right;

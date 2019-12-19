@@ -15,6 +15,7 @@
 #### Requirements
 - Node 8.16.0 or Node 10.16.0 or later version
 - npm 5.2+ version
+- bootstrap
 
 ### Steps for starting the project
   ```

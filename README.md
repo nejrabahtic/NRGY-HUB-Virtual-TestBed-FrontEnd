@@ -21,6 +21,7 @@
   cloning the repository 
   open the repository some text editor, we suggest to use Visual Studio Code
   install the dependencies with npm install in the folder of repository
+  install bootstrap if needed
   run project with npm start 
   ```
 The app will be running on localhost:3000.

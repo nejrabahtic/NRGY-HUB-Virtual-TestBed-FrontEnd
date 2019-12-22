@@ -125,13 +125,13 @@ filter:blur(0px);
   border-bottom: 1px solid rgb(114, 181, 76);
 }
 /*funkar inte- ska stanna uppe(valid som blir fel)*/
-.FormField__Input:valid ~ label{
+/*.FormField__Input:valid ~ label{
   top: -12px;
   left: 0;
   color: #616E7F;
   font-size: 12px;
   font-weight: bold;
-}
+}*/
 /*För att det ska bli grönt när man skrivit in- funkar ej(valid)*/
 /*.FormField__Input:valid{
   border-bottom: 1px solid rgb(114, 181, 76);

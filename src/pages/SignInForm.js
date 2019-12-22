@@ -8,7 +8,7 @@ class SignInForm extends Component {
     super();
 
     this.state = {
-      name: '',
+      email: '',
       password: ''
     };
 
@@ -18,10 +18,10 @@ class SignInForm extends Component {
   handleChange(e){
     let target = e.target;
     let value = target.value;
-    let name = target.name;
+    let email = target.email;
 
     this.setState({
-      [name]: value
+      [email]: value
     });
   }
 
@@ -37,8 +37,8 @@ class SignInForm extends Component {
             <div className="FormCenter">
               <form className="FormFields" onSubmit={this.handleSubmit}>
                 <div className="FormField">
-                  <input type="text" id="name" className="FormField__Input" name="name" value={this.state.name} onChange={this.handleChange} />
-                  <label className="FormField__Label" htmlFor="email">Username</label>
+                  <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} />
+                  <label className="FormField__Label" htmlFor="email">Email</label>
                 </div>
 
                 <div className="FormField">

@@ -9,8 +9,9 @@ class SignUpForm extends Component {
 
     this.state = {
       name: '',
-      company: '',
+     // company: '',  /*måste spara värdet på comapny på nått sätt, detta funkar ej */
       email:'',
+      adress:'',
       password: ''
     };
 
@@ -19,7 +20,7 @@ class SignUpForm extends Component {
   }
   handleChange(e){
     let target = e.target;
-    let value = target.value;
+    let value = target.type === 'checkbox' ? target.checked :target.value;
     let name = target.name;
 
     this.setState({
@@ -30,7 +31,7 @@ class SignUpForm extends Component {
   handleSubmit(e){
     e.preventDefault();
 
-    console.log('the form');
+    console.log('the form has save');
     console.log(this.state);
   }
 
@@ -43,20 +44,24 @@ class SignUpForm extends Component {
                 <label className="FormField__Label" htmlFor="name">Username</label>
               </div>
               <div className="FormField">
-                <input type="text" id="company" className="FormField__Input" name="company" value={this.state.company} onChange={this.handleChange} />
-                <label className="FormField__Label" htmlFor="company">Company Name</label>
-              </div>
-              <div className="FormField">
                 <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} />
                 <label className="FormField__Label" htmlFor="email">E-mail</label>
               </div>
               <div className="FormField">
-                <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} />
-                <label className="FormField__Label" htmlFor="password">Password</label>
+                <select value={this.state.company} onChange={this.handleChange}>
+                  <option value="choose_company">choose your company</option>
+                  <option value="noCompany">no company</option>
+                  <option value="company1">company1</option>
+                  <option value="company2">company2</option>
+                </select>   
+              </div>
+              <div className="FormField"/*Ska vara multiple adress */>
+                <input type="text" id="company" className="FormField__Input" name="adress" value={this.state.adress} onChange={this.handleChange} /*ska vara lista*//>
+                <label className="FormField__Label" htmlFor="adress">Adress</label >   
               </div>
               <div className="FormField">
-                <input type="password" id="password" className="FormField__Input"name="password" /* value={this.state.password} onChange={this.handleChange} */ />
-                <label className="FormField__Label" htmlFor="password">Repeat your password</label>
+                <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} />
+                <label className="FormField__Label" htmlFor="password">Password</label>
               </div>
 
               <div className="FormField">

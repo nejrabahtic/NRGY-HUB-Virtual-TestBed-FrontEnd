@@ -63,6 +63,10 @@ filter:blur(0px);
   margin-top: 23%;
   margin-left: 19em;
 }
+.FormTitle :hover{
+  color:whitesmoke;
+  text-decoration: none;
+}
 
 .FormTitle__Link {
   color: #707C8B;
@@ -152,11 +156,12 @@ filter:blur(0px);
   border-bottom: 1.5px solid rgb(114, 181, 76);
   padding-bottom: 5px;
   position: relative;
-  top: 47px;
-  right: 14em;
+  top: 4em;
+  right: 50%;
 }
 
-/* .FormField__CheckboxLabel {
+
+ .FormField__CheckboxLabel {
   color: #646F7D;
   font-size: .9em;
 }
@@ -173,5 +178,5 @@ filter:blur(0px);
   display: inline-block;
   padding-bottom: 2px;
   margin-left: 5px;
-} */
+} 
 

@@ -11,14 +11,14 @@ class SignUpForm extends Component {
       name: '',
      // company: '',  /*måste spara värdet på comapny på nått sätt, detta funkar ej */
       email:'',
-      adress:'',
+      adresses:[],
       password: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(e){
+  handleChange(e,index){
     let target = e.target;
     let value = target.type === 'checkbox' ? target.checked :target.value;
     let name = target.name;
@@ -26,8 +26,13 @@ class SignUpForm extends Component {
     this.setState({
       [name]: value
     });
+    this.state.adresses[index] = e.target.value;
+    this.setState({adresses: this.state.adresses});
   }
-
+  addAdress(){
+    this.setState({adresses: [...this.state.adresses,""]}
+    )
+  }
   handleSubmit(e){
     e.preventDefault();
 
@@ -48,22 +53,36 @@ class SignUpForm extends Component {
                 <label className="FormField__Label" htmlFor="email">E-mail</label>
               </div>
               <div className="FormField">
-                <select value={this.state.company} onChange={this.handleChange}>
-                  <option value="choose_company">choose your company</option>
+                <select className="FormField__Select" value={this.state.company} onChange={this.handleChange}>
+                  <option value="choose_company">Choose your company..</option>
                   <option value="noCompany">no company</option>
                   <option value="company1">company1</option>
                   <option value="company2">company2</option>
                 </select>   
               </div>
               <div className="FormField"/*Ska vara multiple adress */>
-                <input type="text" id="company" className="FormField__Input" name="adress" value={this.state.adress} onChange={this.handleChange} /*ska vara lista*//>
-                <label className="FormField__Label" htmlFor="adress">Adress</label >   
+                <label className="FormField__Adress" htmlFor="adress">Adress</label > 
+                {
+                  this.state.adresses.map((adress,index)=>{
+                    return(
+                      <div key={index}>
+                        <input className="adress_input"onChange={(e)=>this.handleChange(e, index)} value={adress}/>
+                      </div>
+                    )
+                  })
+                }  
+                <button className="Formfield_AdressButton"onClick={(e)=>this.addAdress(e)}>Add Adress</button>
               </div>
+
               <div className="FormField">
                 <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} />
                 <label className="FormField__Label" htmlFor="password">Password</label>
               </div>
-
+              <div className="FormField">
+                <label className="FormField__CheckboxLabel">
+                    <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
+                </label>
+              </div>
               <div className="FormField">
                   <button className="FormField__Button mr-20">Sign Up</button> <Link to="/sign-in" className="FormField__Link">I'm already member</Link>
               </div>

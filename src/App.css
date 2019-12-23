@@ -159,8 +159,6 @@ filter:blur(0px);
   top: 4em;
   right: 50%;
 }
-
-
  .FormField__CheckboxLabel {
   color: #646F7D;
   font-size: .9em;
@@ -173,10 +171,60 @@ filter:blur(0px);
 
 .FormField__TermsLink {
   color: white;
-  border-bottom: 1px solid #199087;
+  border-bottom: 1px solid rgb(114, 181, 76);
   text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
   margin-left: 5px;
 } 
+.FormField__TermsLink:hover{
+  color: #646F7D;
+  text-decoration: none;
+}
+.FormField__Select{
+  color: whitesmoke;
+  background-color: transparent;
+  border-color: #445366;
+  font-size: 1.2em;
+  width: 17em;
+  height: 2em;
+}
+.FormField__Select:hover{
+  background-color: gray;
+}
 
+.Formfield_AdressButton{
+  background-color: transparent;
+  color:whitesmoke;
+  border-color: #445366;
+  margin-top: 1em;
+  position: relative;
+}
+.FormField__Adress{
+  width: 18em;
+  font-size: 1.2em;
+}
+.adress_input{
+  width: 20em;
+  background-color: transparent;
+  border:none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.FormField__Input {
+  width: 20em;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}

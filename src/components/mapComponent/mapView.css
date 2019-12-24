@@ -1,5 +1,5 @@
 .leaflet-container{
-    height: calc(100vh - 54px) !important;
-    width: calc(100vw - 320px) !important;
-    left: 320px;
+    height: calc(100vh - 1px) !important;
+    /* width: calc(100vw - 280px) !important;
+    left: 280px; */
 }

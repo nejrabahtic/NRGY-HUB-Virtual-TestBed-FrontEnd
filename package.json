@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.4.5",
     "antd": "^3.26.3",
     "bootstrap": "^4.4.1",
     "leaflet": "^1.6.0",

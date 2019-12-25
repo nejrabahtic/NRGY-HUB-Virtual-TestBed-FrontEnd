@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
-import NavBar from '../navbar/navbar';
-import SideBar from '../sidebar/sidebar';
 
 class MapView extends Component {
     constructor() {

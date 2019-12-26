@@ -159,6 +159,12 @@ filter:blur(0px);
   top: 4em;
   right: 50%;
 }
+
+.FormField__Link:hover{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
  .FormField__CheckboxLabel {
   color: #646F7D;
   font-size: .9em;

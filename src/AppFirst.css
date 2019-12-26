@@ -122,8 +122,13 @@ filter:blur(0px);
   padding-bottom: 10px;
   margin-top: 10px;
 }
+
+.FormField__Input::placeholder{
+  color: transparent;
+}
 /*The animation*/
-.FormField__Input:focus ~ label{
+.FormField__Input:focus ~ label,
+.FormField__Input:not(:placeholder-shown) + .FormField__Label {
   top: -12px;
   left: 0;
   color: #616E7F;
@@ -133,6 +138,7 @@ filter:blur(0px);
 .FormField__Input:focus{
   border-bottom: 1px solid rgb(114, 181, 76);
 }
+
 /*funkar inte- ska stanna uppe(valid som blir fel)*/
 /*.FormField__Input:valid ~ label{
   top: -12px;

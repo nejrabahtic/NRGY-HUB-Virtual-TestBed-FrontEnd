@@ -37,12 +37,12 @@ class SignInForm extends Component {
             <div className="FormCenter">
               <form className="FormFields" onSubmit={this.handleSubmit}>
                 <div className="FormField">
-                  <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} />
+                  <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email" />
                   <label className="FormField__Label" htmlFor="email">Email</label>
                 </div>
 
                 <div className="FormField">
-                  <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} />
+                  <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                   <label className="FormField__Label" htmlFor="password">Password</label>
                 </div>
 

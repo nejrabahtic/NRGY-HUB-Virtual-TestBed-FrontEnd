@@ -27,6 +27,10 @@ top:60%;
 font-weight: 500;
 line-height: 65px;
 text-shadow:1px 1px 1px rgb(102, 102, 102);
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none; 
 /*transform: scale(0);
 filter:blur(0px);
 -webkit-filter:blur(0px);
@@ -35,6 +39,10 @@ filter:blur(0px);
 
 #InfoTextUnder{
   font-size: 60px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   
 }
 

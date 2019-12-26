@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ImageComponent from './components/imageComponent/imageComponent';
+import ImageComponent from './components/imageComponent/ImageComponent';
+import SignForms from './components/signForms/SignForms';
 
 
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
         return (
             <div>
                 <ImageComponent />
+                <SignForms />
             </div>
         );
     }

@@ -4,9 +4,7 @@ import logo from './coverImage.png';
 class ImageComponent extends Component {
     render() {
         return (
-            <div>
-                <img src={logo} alt="Logo" />;
-            </div>
+            <img src={logo} alt="Logo" width="40%" height="100% - 1px" />
         );
     }
 }

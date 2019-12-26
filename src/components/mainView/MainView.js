@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MapView from '../mapComponent/mapView';
-import SideBar from '../sidebar/sidebar';
+import MapView from '../mapComponent/MapView';
+import SideBar from '../sidebar/Sidebar';
 
 class MainView extends Component {
     render() {

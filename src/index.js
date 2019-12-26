@@ -8,8 +8,8 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import SignInForm from './pages/SignInForm';
 import SignUpForm from './pages/SignUpForm';
-import MapView from './components/mapComponent/mapView';
-import MainView from './components/mainView/mainView';
+import MapView from './components/mapComponent/MapView';
+import MainView from './components/mainView/MainView';
 
 
 const routing = (

@@ -50,18 +50,20 @@ filter:blur(0px);
 }
 /*the right side*/
 .FormCenter {
-  margin-bottom: 100px;
-  position: absolute;
-  margin-left: 20em;
-  top:20em;
+}
+
+.formContainer{
+  margin: 0 auto;
+  width: 350px;
+  padding-top: 10%;
 }
 
 .FormTitle {
   color: #707C8B;
   font-weight: 300;
-  margin-bottom: 50px;
+/*   margin-bottom: 50px;
   margin-top: 23%;
-  margin-left: 19em;
+  margin-left: 19em; */
 }
 .FormTitle :hover{
   color:whitesmoke;
@@ -156,8 +158,8 @@ filter:blur(0px);
   border-bottom: 1.5px solid rgb(114, 181, 76);
   padding-bottom: 5px;
   position: relative;
-  top: 4em;
-  right: 50%;
+  top: 1em;
+  right: -25%;
 }
 
 .FormField__Link:hover{

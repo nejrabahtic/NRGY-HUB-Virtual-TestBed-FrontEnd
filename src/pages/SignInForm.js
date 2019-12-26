@@ -18,10 +18,10 @@ class SignInForm extends Component {
   handleChange(e){
     let target = e.target;
     let value = target.value;
-    let email = target.email;
-
+    let name = target.name;
+    
     this.setState({
-      [email]: value
+      [name]: value
     });
   }
 

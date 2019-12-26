@@ -57,9 +57,6 @@ filter:blur(0px);
   z-index: 10; /* får skarp kant mellan höger och vänster sida */
 }
 /*the right side*/
-.FormCenter {
-}
-
 .formContainer{
   margin: 0 auto;
   width: 350px;
@@ -69,6 +66,7 @@ filter:blur(0px);
 .FormTitle {
   color: #707C8B;
   font-weight: 300;
+  padding-bottom: 1em;
 /*   margin-bottom: 50px;
   margin-top: 23%;
   margin-left: 19em; */
@@ -95,6 +93,7 @@ filter:blur(0px);
   color: white;
   border-bottom: 1px solid rgb(114, 181, 76);
 }
+
 
 .FormField {
   margin-bottom: 26px;

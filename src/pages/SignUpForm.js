@@ -9,10 +9,12 @@ class SignUpForm extends Component {
 
     this.state = {
       name: '',
-     // company: '',  /*måste spara värdet på comapny på nått sätt, detta funkar ej */
+      company: '',  /*måste spara värdet på comapny på nått sätt, detta funkar ej */
       email:'',
-      adresses:[],
-      password: ''
+      address:'',
+      password: '',
+      userType: ''
+
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,13 +28,13 @@ class SignUpForm extends Component {
     this.setState({
       [name]: value
     });
-    this.state.adresses[index] = e.target.value;
-    this.setState({adresses: this.state.adresses});
+    /* this.state.adresses[index] = e.target.value;
+    this.setState({adresses: this.state.adresses}); */
   }
-  addAdress(){
+/*   addAdress(){
     this.setState({adresses: [...this.state.adresses,""]}
     )
-  }
+  } */
   handleSubmit(e){
     e.preventDefault();
 
@@ -52,16 +54,9 @@ class SignUpForm extends Component {
                 <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} />
                 <label className="FormField__Label" htmlFor="email">E-mail</label>
               </div>
-              <div className="FormField">
-                <select className="FormField__Select" value={this.state.company} onChange={this.handleChange}>
-                  <option value="choose_company">Choose your company..</option>
-                  <option value="noCompany">no company</option>
-                  <option value="company1">company1</option>
-                  <option value="company2">company2</option>
-                </select>   
-              </div>
+              
               <div className="FormField"/*Ska vara multiple adress */>
-                <label className="FormField__Adress" htmlFor="adress">Adress</label > 
+                {/* <label className="FormField__Adress" htmlFor="adress">Adress</label > 
                 {
                   this.state.adresses.map((adress,index)=>{
                     return(
@@ -70,8 +65,28 @@ class SignUpForm extends Component {
                       </div>
                     )
                   })
-                }  
-                <button className="Formfield_AdressButton"onClick={(e)=>this.addAdress(e)}>Add Adress</button>
+            
+              <button className="Formfield_AdressButton"onClick={(e)=>this.addAdress(e)}>Add Adress</button>*/}
+                <input type="text" id="address" className="FormField__Input" name="address" value={this.state.address} onChange={this.handleChange} />
+                <label className="FormField__Label" htmlFor="address">Address</label>
+              </div>
+              <div className="FormField">
+                <select className="FormField__Select" name="company" value={this.state.company} onChange={this.handleChange}>
+                  <option value="choose_company">Choose your company..</option>
+                  <option value="noCompany">no company</option>
+                  <option value="company1">company1</option>
+                  <option value="company2">company2</option>
+                </select>   
+              </div>
+
+              <div className="FormField">
+                <select className="FormField__Select" name="userType" value={this.state.userType} onChange={this.handleChange}>
+                  <option value="select_user_type">Select your user type..</option>
+                  <option value="single_user">Single User</option>
+                  <option value="heating_company">Heating Company</option>
+                  <option value="electricity_company">Electricity Company</option>
+                  <option value="regular_user">Regular User</option>
+                </select>   
               </div>
 
               <div className="FormField">

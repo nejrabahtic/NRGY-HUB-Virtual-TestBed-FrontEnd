@@ -10,11 +10,11 @@ class AppWrong extends Component{
     return(
       <Router basename="/react-auth-ui/">
         <div className="App">
-          <div className="App__Aside">
+         {/*  <div className="App__Aside">
             <div className="InfoText"> 
             <span>Welcome<span id="InfoTextUnder"><br/>to<br/>NRGY HUB virtual testbed</span></span>
             </div>
-          </div>
+          </div> */}
           <div className="App__Form">
             {/* <div className="PageSwitcher">
                 <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>

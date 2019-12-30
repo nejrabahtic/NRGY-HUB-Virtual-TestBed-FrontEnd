@@ -227,3 +227,17 @@ filter:blur(0px);
   padding-bottom: 10px;
   margin-top: 10px;
 }
+#SignUp__Error{
+  font-size: 0.9em;
+  color: red;
+  position: relative;
+  bottom: 1em;
+  left: 5em;
+}
+#SignIn__Error{
+  font-size: 0.9em;
+  color: red;
+  position: relative;
+  bottom: 1em;
+  left: 4em;
+}

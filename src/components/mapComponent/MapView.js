@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
 
+let markers = [
+    {
+      "lat": 59.6099,
+      "lng": 16.5447
+    },
+    {
+      "lat": 59.6097,
+      "lng": 16.5445
+    },
+    {
+      "lat": 59.6096,
+      "lng": 16.5446
+    }
+ ];
+
 class MapView extends Component {
     constructor() {
         super()

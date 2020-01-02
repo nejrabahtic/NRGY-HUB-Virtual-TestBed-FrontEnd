@@ -12,7 +12,7 @@ class SideBar extends Component {
                         // Add your code here
                     }}
                 >
-                    {/* <SideNav.Toggle /> */}
+                    <SideNav.Toggle />
                     <SideNav.Nav defaultSelected="mainView" id="nav">
                     <h5><center>Menu</center></h5>
                         <NavItem>

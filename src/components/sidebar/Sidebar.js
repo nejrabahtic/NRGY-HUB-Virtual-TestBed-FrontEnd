@@ -14,9 +14,7 @@ class SideBar extends Component {
                 >
                     {/* <SideNav.Toggle /> */}
                     <SideNav.Nav defaultSelected="mainView" id="nav">
-                        <NavItem>
-                            <h5><center>Menu</center></h5>
-                        </NavItem>
+                    <h5><center>Menu</center></h5>
                         <NavItem>
                             <NavIcon>
                                 <i className="fa fa-user" style={{ fontSize: '1.75em' }} />

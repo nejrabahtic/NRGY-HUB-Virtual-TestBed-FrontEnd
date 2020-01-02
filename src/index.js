@@ -15,8 +15,6 @@ import MainView from './components/mainView/MainView';
 const routing = (
     <Router>
       <div>
-        <Route exact path="/" component={AppWrong} />
-        <Route exact path="/forms" component={AppWrong} />
         <Route path="/signin" component={SignInForm} />
         <Route path="/signup" component={SignUpForm} />
         <Route path="/map" component={MapView} />

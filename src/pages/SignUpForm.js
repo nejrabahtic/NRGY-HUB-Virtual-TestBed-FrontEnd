@@ -47,12 +47,17 @@ class SignUpForm extends Component {
         <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields">
               <div className="FormField">
-                <input type="text" id="name" className="FormField__Input" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Username"/>
-                <label className="FormField__Label" htmlFor="name">Username</label>
+                <input type="text" id="name" className="FormField__Input" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Name"/>
+                <label className="FormField__Label" htmlFor="name">Name</label>
               </div>
               <div className="FormField">
                 <input type="email" id="email" className="FormField__Input" name="email" value={this.state.email} onChange={this.handleChange} placeholder="E-mail"/>
                 <label className="FormField__Label" htmlFor="email">E-mail</label>
+              </div>
+                
+              <div className="FormField">
+                <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password"/>
+                <label className="FormField__Label" htmlFor="password">Password</label>
               </div>
               
               <div className="FormField"/*Ska vara multiple adress */>
@@ -88,17 +93,12 @@ class SignUpForm extends Component {
                   <option value="regular_user">Regular User</option>
                 </select>   
               </div>
-
-              <div className="FormField">
-                <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password"/>
-                <label className="FormField__Label" htmlFor="password">Password</label>
-              </div>
               <div className="FormField">
                 <label className="FormField__CheckboxLabel">
                     <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
                 </label>
               </div>
-                <label id="SignUp__Error" hidden="true" >All fields must be filled in</label>
+                <label id="SignUp__Error" /*hidden="true"*/ >All fields must be filled in</label>
               <div className="FormField">
                   <button className="FormField__Button mr-20">Sign Up</button> <Link to="/sign-in" className="FormField__Link">I'm already member</Link>
               </div>

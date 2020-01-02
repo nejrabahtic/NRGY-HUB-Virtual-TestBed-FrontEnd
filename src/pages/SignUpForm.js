@@ -9,7 +9,7 @@ class SignUpForm extends Component {
 
     this.state = {
       name: '',
-      company: '',  /*måste spara värdet på comapny på nått sätt, detta funkar ej */
+      company: '',  /*Need to be changed */
       email:'',
       address:'',
       password: '',
@@ -28,13 +28,8 @@ class SignUpForm extends Component {
     this.setState({
       [name]: value
     });
-    /* this.state.adresses[index] = e.target.value;
-    this.setState({adresses: this.state.adresses}); */
   }
-/*   addAdress(){
-    this.setState({adresses: [...this.state.adresses,""]}
-    )
-  } */
+
   handleSubmit(e){
     e.preventDefault();
 
@@ -60,18 +55,7 @@ class SignUpForm extends Component {
                 <label className="FormField__Label" htmlFor="password">Password</label>
               </div>
               
-              <div className="FormField"/*Ska vara multiple adress */>
-                {/* <label className="FormField__Adress" htmlFor="adress">Adress</label > 
-                {
-                  this.state.adresses.map((adress,index)=>{
-                    return(
-                      <div key={index}>
-                        <input className="adress_input"onChange={(e)=>this.handleChange(e, index)} value={adress}/>
-                      </div>
-                    )
-                  })
-            
-              <button className="Formfield_AdressButton"onClick={(e)=>this.addAdress(e)}>Add Adress</button>*/}
+              <div className="FormField">
                 <input type="text" id="address" className="FormField__Input" name="address" value={this.state.address} onChange={this.handleChange} placeholder="Address"/>
                 <label className="FormField__Label" htmlFor="address">Address</label>
               </div>

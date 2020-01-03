@@ -72,7 +72,7 @@ class MapView extends Component {
                     />
                 {markers.map(mark => (
                     <Marker position={[mark.lat,mark.lng]}>
-                        <Popup>
+                        <Popup className="popup">
                             <h6><b>Adress:</b>{mark.adress}</h6>
                             <h6><b>Heat:</b>{mark.heat}</h6>
                             <h6><b>Electricity:</b>{mark.elec}</h6>

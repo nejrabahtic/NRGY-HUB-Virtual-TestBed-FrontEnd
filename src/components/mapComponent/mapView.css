@@ -3,3 +3,6 @@
     /* width: calc(100vw - 280px) !important;
     left: 280px; */
 }
+.popup h6{      /*style for the popup-text*/
+    color: black;
+}

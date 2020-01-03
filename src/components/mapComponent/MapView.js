@@ -1,48 +1,62 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
-import { popup } from 'leaflet';
 
+//this should be in another file and come from a database with info
 let markers = [
     {
         lat: 59.6099,
         lng: 16.5448,
-        message: "hello1"
+        adress: "hello1",
+        heat: 123,
+        elec:345
     },
     {
         lat: 59.6098,
         lng: 16.5447,
-        message: "hejdå"
+        adress: "hejdå",
+        heat: 123,
+        elec:345
     },
     {
         lat: 59.6098,
         lng: 16.5446,
-        message: "h"
+        adress: "h",
+        heat: 123,
+        elec:345
     },
     {
         lat: 59.6095,
         lng: 16.5447,
-        message: "helfer"
+        adress: "helfer",
+        heat: 123,
+        elec:345
       },
       {
         lat: 59.6094,
         lng: 16.5445,
-        message: "huhwe"
+        adress: "huhwe",
+        heat: 123,
+        elec:345
       },
       {
         lat: 59.6096,
         lng: 16.5446,
-        message: "hdhewåoi"
+        adress: "hdhewåoi",
+        heat: 123,
+        elec:345
       }
  ];
 
 class MapView extends Component {
     constructor() {
         super()
-        this.state = {
+        this.state = {  
             lat: 59.6099,
             lng: 16.5448,
-            message: "standrard",
+            adress: "standard",
+            heat: 123,
+            elec:345,
             zoom: 12
         }
     }
@@ -58,7 +72,11 @@ class MapView extends Component {
                     />
                 {markers.map(mark => (
                     <Marker position={[mark.lat,mark.lng]}>
-                        <Popup>{mark.message}</Popup>
+                        <Popup>
+                            <h6><b>Adress:</b>{mark.adress}</h6>
+                            <h6><b>Heat:</b>{mark.heat}</h6>
+                            <h6><b>Electricity:</b>{mark.elec}</h6>
+                        </Popup>
                     </Marker>
                 ))}
                 </Map>

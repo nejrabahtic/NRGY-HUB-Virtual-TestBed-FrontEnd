@@ -45,7 +45,7 @@ class SignInForm extends Component {
                   <input type="password" id="password" className="FormField__Input" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                   <label className="FormField__Label" htmlFor="password">Password</label>
                 </div>
-                <label id="SignIn__Error" hidden="true" >Wrong username or password</label>
+                <label id="SignIn__Error" /*hidden="true"*/ >Wrong username or password</label>
                 <div className="FormField">
                   <button className="FormField__Button mr-20">Sign In</button> <Link to="/" className="FormField__Link">Create an account</Link>
                 </div>

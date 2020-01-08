@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './AdminForms.css';
 
 class AdminForms extends Component {
@@ -9,11 +10,11 @@ class AdminForms extends Component {
     render() {
         return (
             <div className="page">
-                <h2>test</h2>
+                <h1>Admin Panel</h1>
 
                 <form> </form>
                 <div className="formCenter">
-                <label className="Title" htmlFor="Bulding">Bulding</label>
+                    <h2 className="Title">Building</h2> 
                     
                     <div className="FormField">
                         <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
@@ -23,10 +24,14 @@ class AdminForms extends Component {
                     <div className="FormField">
                         <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
                         <label className="FormField__Label" htmlFor="address">Address</label>
+                    </div>
+
+                    <div className="FormField">
+                        <button className="FormField__Button mr-20">Save</button>
                     </div>
               </div>
 
-              <label className="Title" htmlFor="Company">Company</label>
+              <h2 className="Title">Company</h2> 
                     
                     <div className="FormField">
                         <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
@@ -36,6 +41,10 @@ class AdminForms extends Component {
                     <div className="FormField">
                         <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
                         <label className="FormField__Label" htmlFor="address">Address</label>
+                    </div>
+
+                    <div className="FormField">
+                        <button className="FormField__Button mr-20">Save</button>
                     </div>
               </div>
 

@@ -3,12 +3,16 @@
     background-color: rgb(49, 49, 49);
     color: whitesmoke;
     width: 100%;
+    padding: 10%;
 }
 
 .formCenter{
 
 }
 
+.Title{
+   
+}
 
 .FormField__Button {
     background-color: rgb(114, 181, 76);

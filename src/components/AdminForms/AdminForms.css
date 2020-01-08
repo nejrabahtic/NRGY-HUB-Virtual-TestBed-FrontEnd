@@ -1,0 +1,26 @@
+.page{
+    height: calc(100vh - 1px) !important;
+    background-color: rgb(49, 49, 49);
+    color: whitesmoke;
+    width: 100%;
+}
+
+.formCenter{
+
+}
+
+
+.FormField__Button {
+    background-color: rgb(114, 181, 76);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    /*padding: 15px 70px;*/   /*short button*/
+    padding: 15px 115px;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+
+

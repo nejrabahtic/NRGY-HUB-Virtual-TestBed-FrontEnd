@@ -6,12 +6,24 @@
     padding: 10%;
 }
 
-.formCenter{
+h1{
+    font-size: 4.5rem;
+}
 
+.formCenter{
+display: inline-block;
+margin-right: 7%;
+margin-left: 7%;
+margin-top: 3%;
+text-align: left;
+}
+
+.Container{
+    text-align: center;
 }
 
 .Title{
-   
+    margin-bottom: 5%;
 }
 
 .FormField__Button {

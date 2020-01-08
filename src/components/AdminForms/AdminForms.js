@@ -10,43 +10,50 @@ class AdminForms extends Component {
     render() {
         return (
             <div className="page">
-                <h1>Admin Panel</h1>
+                <div className="Container">
 
-                <form> </form>
-                <div className="formCenter">
-                    <h2 className="Title">Building</h2> 
-                    
-                    <div className="FormField">
-                        <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
-                        <label className="FormField__Label" htmlFor="name">Name</label>
+                    <h1>Admin Panel</h1>
+
+                   <form> </form>
+                    <div className="formCenter">
+                        <h2 className="Title">Building</h2> 
+                        
+                        <div className="FormField">
+                            <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
+                            <label className="FormField__Label" htmlFor="name">Name</label>
+                        </div>
+
+                        <div className="FormField">
+                            <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
+                            <label className="FormField__Label" htmlFor="address">Address</label>
+                        </div>
+
+                        <div className="FormField">
+                            <button className="FormField__Button mr-20">Save</button>
+                        </div>
                     </div>
 
-                    <div className="FormField">
-                        <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
-                        <label className="FormField__Label" htmlFor="address">Address</label>
-                    </div>
+                    <div className="formCenter">
+                        
+                        <h2 className="Title">Company</h2> 
+                        
+                        <div className="FormField">
+                            <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
+                            <label className="FormField__Label" htmlFor="name">Name</label>
+                        </div>
 
-                    <div className="FormField">
-                        <button className="FormField__Button mr-20">Save</button>
-                    </div>
-              </div>
+                        <div className="FormField">
+                            <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
+                            <label className="FormField__Label" htmlFor="address">Address</label>
+                        </div>
 
-              <h2 className="Title">Company</h2> 
-                    
-                    <div className="FormField">
-                        <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
-                        <label className="FormField__Label" htmlFor="name">Name</label>
-                    </div>
+                        <div className="FormField">
+                            <button className="FormField__Button mr-20">Save</button>
+                        </div>
+                    </div> 
 
-                    <div className="FormField">
-                        <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
-                        <label className="FormField__Label" htmlFor="address">Address</label>
-                    </div>
-
-                    <div className="FormField">
-                        <button className="FormField__Button mr-20">Save</button>
-                    </div>
-              </div>
+                </div>   
+            </div>
 
             
             

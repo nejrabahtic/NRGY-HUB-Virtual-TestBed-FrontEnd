@@ -4,5 +4,8 @@
     left: 280px; */
 }
 .popup h6{      /*style for the popup-text*/
-    color: black;
+    color: black;  
+}
+.popup b{
+    text-decoration: underline;
 }

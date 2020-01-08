@@ -1,50 +1,51 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
+import { Tab } from 'react-bootstrap';
 
 //this should be in another file and come from a database with info
 let markers = [
     {
-        lat: 59.6099,
-        lng: 16.5448,
-        adress: "hello1",
-        heat: 123,
-        elec:345
+        lat: 59.644729,
+        lng: 16.568723,
+        adress: "Strömledningsgatan 15",
+        heat: 23.0,
+        elec:113373.0,
     },
     {
-        lat: 59.6098,
-        lng: 16.5447,
-        adress: "hejdå",
-        heat: 123,
-        elec:345
+        lat: 59.644729,
+        lng: 16.568723,
+        adress: "Strömledningsgatan 15",
+        heat: 15009.0,
+        elec:4.0,
     },
     {
-        lat: 59.6098,
-        lng: 16.5446,
-        adress: "h",
-        heat: 123,
-        elec:345
+        lat: 59.645672,
+        lng: 16.567371,
+        adress: "Strömledningsgatan 15",
+        heat: 4670.0,
+        elec: 0.0,
     },
     {
-        lat: 59.6095,
-        lng: 16.5447,
-        adress: "helfer",
-        heat: 123,
-        elec:345
+        lat: 59.642376,
+        lng: 16.567339,
+        adress: "Strömledningsgatan 6",
+        heat: 21165.0,
+        elec: 0.0,
       },
       {
-        lat: 59.6094,
-        lng: 16.5445,
-        adress: "huhwe",
-        heat: 123,
-        elec:345
+        lat: 59.642707,
+        lng: 16.564034,
+        adress: "Elledningsgatan 3",
+        heat: 2454.0,
+        elec: 0.0,
       },
       {
-        lat: 59.6096,
-        lng: 16.5446,
-        adress: "hdhewåoi",
-        heat: 123,
-        elec:345
+        lat: 59.641720,
+        lng: 16.564560,
+        adress: "Strömledningsgatan 11",
+        heat: 5418.0,
+        elec: 0.0,
       }
  ];
 
@@ -57,7 +58,10 @@ class MapView extends Component {
             adress: "standard",
             heat: 123,
             elec:345,
-            zoom: 12
+            zoom: 12,
+            heatcompany: false,
+            electricitycompany: false,
+            Regularuser:false
         }
     }
 
@@ -73,9 +77,9 @@ class MapView extends Component {
                 {markers.map(mark => (
                     <Marker position={[mark.lat,mark.lng]}>
                         <Popup className="popup">
-                            <h6><b>Adress:</b>{mark.adress}</h6>
-                            <h6><b>Heat:</b>{mark.heat}</h6>
-                            <h6><b>Electricity:</b>{mark.elec}</h6>
+                            <h6><b>Adress:</b> {mark.adress}</h6>
+                            <h6 ><b>Heat:</b><div className="heat_label">{this.state.heatcompany ? mark.heat: "No access"}</div></h6>
+                            <h6><b>Electricity:</b><div className="elec_label">{this.state.electricitycompany ? mark.elec: "No access"}</div></h6>
                         </Popup>
                     </Marker>
                 ))}

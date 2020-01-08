@@ -61,7 +61,7 @@ class MapView extends Component {
             zoom: 12,
             heatcompany: false,
             electricitycompany: false,
-            Regularuser:false
+            admin: true
         }
     }
 
@@ -77,9 +77,9 @@ class MapView extends Component {
                 {markers.map(mark => (
                     <Marker position={[mark.lat,mark.lng]}>
                         <Popup className="popup">
-                            <h6><b>Adress:</b> {mark.adress}</h6>
-                            <h6 ><b>Heat:</b><div className="heat_label">{this.state.heatcompany ? mark.heat: "No access"}</div></h6>
-                            <h6><b>Electricity:</b><div className="elec_label">{this.state.electricitycompany ? mark.elec: "No access"}</div></h6>
+                            <h6><b>Adress:</b> {mark.adress}</h6>   
+                            <h6 ><b>Heat:</b><div className="heat_label">{this.state.heatcompany||this.state.admin ? mark.heat: "No access"}</div></h6>
+                            <h6><b>Electricity:</b><div className="elec_label">{this.state.electricitycompany||this.state.admin ? mark.elec: "No access"}</div></h6>
                         </Popup>
                     </Marker>
                 ))}

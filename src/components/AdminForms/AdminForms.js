@@ -4,9 +4,38 @@ import './AdminForms.css';
 
 class AdminForms extends Component {
 
-    /*constructor(){
+    constructor(){
+        super();
 
-    }*/
+        this.state = {  /*must fix/adjust to right name/value!!!*/
+            name: '',
+            company: '', 
+            address:'',
+            userType: ''
+      
+          };
+      
+          this.handleChange = this.handleChange.bind(this);
+          this.handleSubmit = this.handleSubmit.bind(this);
+        }
+
+        handleChange(e){
+        let target = e.target;
+        let value = target.value;
+        let name = target.name;
+
+        this.setState({
+            [name]: value
+          });
+        }
+        
+        handleSubmit(e){
+            e.preventDefault();
+        
+            console.log('the form');
+            console.log(this.state);
+          }
+
     render() {
         return (
             <div className="page">
@@ -14,7 +43,7 @@ class AdminForms extends Component {
 
                     <h1>Admin Panel</h1>
 
-                   <form> </form>
+                   <form onSubmit={this.handleSubmit} className="FormFields">
                     <div className="formCenter">
                         <h2 className="Title">Building</h2> 
                         
@@ -51,6 +80,7 @@ class AdminForms extends Component {
                             <button className="FormField__Button mr-20">Save</button>
                         </div>
                     </div> 
+                    </form>
 
                 </div>   
             </div>

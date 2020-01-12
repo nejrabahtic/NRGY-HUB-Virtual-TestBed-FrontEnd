@@ -8,10 +8,10 @@ class AdminForms extends Component {
         super();
 
         this.state = {  /*must fix/adjust to right name/value!!!*/
-            name: '',
-            company: '', 
-            address:'',
-            userType: ''
+            buildingName: '',
+            buildingAddress: '', 
+            companyName:'',
+            companyAddress: ''
       
           };
       
@@ -48,12 +48,12 @@ class AdminForms extends Component {
                         <h2 className="Title">Building</h2> 
                         
                         <div className="FormField">
-                            <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
+                            <input type="text" id="name" className="FormField__Input" name="buildingName" value={this.state.buildingName} onChange={this.handleChange} placeholder="Name"/>
                             <label className="FormField__Label" htmlFor="name">Name</label>
                         </div>
 
                         <div className="FormField">
-                            <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
+                            <input type="text" id="address" className="FormField__Input" name="buildingAddress" value={this.state.buildingAddress} onChange={this.handleChange} placeholder="Address"/>
                             <label className="FormField__Label" htmlFor="address">Address</label>
                         </div>
 
@@ -67,12 +67,12 @@ class AdminForms extends Component {
                         <h2 className="Title">Company</h2> 
                         
                         <div className="FormField">
-                            <input type="text" id="name" className="FormField__Input" name="name" /*value={this.state.name} onChange={this.handleChange}*/ placeholder="Name"/>
+                            <input type="text" id="name" className="FormField__Input" name="companyName" value={this.state.companyName} onChange={this.handleChange} placeholder="Name"/>
                             <label className="FormField__Label" htmlFor="name">Name</label>
                         </div>
 
                         <div className="FormField">
-                            <input type="text" id="address" className="FormField__Input" name="address" /*value={this.state.address} onChange={this.handleChange}*/ placeholder="Address"/>
+                            <input type="text" id="address" className="FormField__Input" name="companyAddress" value={this.state.companyAddress} onChange={this.handleChange} placeholder="Address"/>
                             <label className="FormField__Label" htmlFor="address">Address</label>
                         </div>
 

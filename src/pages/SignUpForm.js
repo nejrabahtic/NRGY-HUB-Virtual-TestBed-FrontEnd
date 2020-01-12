@@ -63,7 +63,7 @@ class SignUpForm extends Component {
                 <select className="FormField__Select" name="company" value={this.state.company} onChange={this.handleChange}>
                   <option value="choose_company">Choose your company..</option>
                   <option value="noCompany">no company</option>
-                  <option value="company1">company1</option>
+                  <option value="company1">Mälarenergi</option>
                   <option value="company2">company2</option>
                 </select>   
               </div>
@@ -82,7 +82,7 @@ class SignUpForm extends Component {
                     <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
                 </label>
               </div>
-                <label id="SignUp__Error" /*hidden="true"*/ >All fields must be filled in</label>
+                <label id="SignUp__Error" hidden="true" >All fields must be filled in</label>
               <div className="FormField">
                   <button className="FormField__Button mr-20">Sign Up</button> <Link to="/sign-in" className="FormField__Link">I'm already member</Link>
               </div>

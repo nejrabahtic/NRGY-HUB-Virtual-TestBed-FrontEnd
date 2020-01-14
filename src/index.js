@@ -10,6 +10,7 @@ import SignInForm from './pages/SignInForm';
 import SignUpForm from './pages/SignUpForm';
 import MapView from './components/mapComponent/MapView';
 import MainView from './components/mainView/MainView';
+import AdminForms from './components/AdminForms/AdminForms';
 
 
 const routing = (
@@ -20,6 +21,7 @@ const routing = (
         <Route path="/signup" component={SignUpForm} />
         <Route path="/map" component={MapView} />
         <Route path="/mainpage" component={MainView} />
+        <Route path="/adminforms" component={AdminForms} />
       </div>
     </Router>
   )

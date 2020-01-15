@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import './sign.css';
 
 class SignUpForm extends Component {
   state = {
@@ -29,19 +29,18 @@ class SignUpForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event){
+  handleChange(event) {
     let target = event.target;
     let value = target.type === 'checkbox' ? target.checked : target.value;
     let name = target.name;
     let type = target.value;
-    let password = target.value;
 
-    if (type === "heating_company"){
+    if (type === "heating_company") {
       this.state.heatCompany = 1;
       this.state.elecCompany = 0;
     }
-    
-    if (type === "electricity_company"){
+
+    if (type === "electricity_company") {
       this.state.heatCompany = 0;
       this.state.elecCompany = 1;
     }
@@ -49,7 +48,7 @@ class SignUpForm extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
 
     const user = {
@@ -64,20 +63,28 @@ class SignUpForm extends Component {
       lon: this.state.lon
     };
 
-    console.log("USER", user)
+    fetch('/user/add', {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors'
+    }).then(response => {
+      response.json().then(data => {
+        console.log("Successful" + data);
+      })
+    })
 
-    fetch('http://localhost:8000/user/add',{
-        method: "POST",
-        body: JSON.stringify(user),
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }).then(response => {
-        response.json().then(data =>{
-          console.log("Successful" + data);
-        })
+    this.setState({
+      name: '',
+      email: '',
+      address: '',
+      password: '',
+      type: '',
     })
   }
 
@@ -85,7 +92,7 @@ class SignUpForm extends Component {
     const { companies, isLoading } = this.state;
 
     if (isLoading) {
-      return <p><center>Loading...</center></p>;
+      return <p>Loading...</p>;
     }
 
     const items = [];
@@ -97,7 +104,7 @@ class SignUpForm extends Component {
 
     return (
       <div className="FormCenter">
-        <form onSubmit={this.handleSubmit} className="FormFields">
+        <form id="form" onSubmit={this.handleSubmit} className="FormFields">
           <div className="FormField">
             <input type="text" id="name" className="FormField__Input" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Name" />
             <label className="FormField__Label" htmlFor="name">Name</label>
@@ -128,7 +135,7 @@ class SignUpForm extends Component {
           </div>
 
           <div className="FormField">
-            <select className="FormField__Select" name="userType" value={this.state.userType} onChange={this.handleChange}>
+            <select className="FormField__Select" name="userType" onChange={this.handleChange}>
               <option value="select_user_type">Select your user type..</option>
               <option value="heating_company">Heating Company</option>
               <option value="electricity_company">Electricity Company</option>

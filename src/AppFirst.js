@@ -8,7 +8,7 @@ class AppFirst extends Component {
 
   render() {
     return (
-      <Router basename="/react-auth-ui/">
+      <Router>
         <div className="App">
           <div className="App__Aside">
             <div className="InfoText">

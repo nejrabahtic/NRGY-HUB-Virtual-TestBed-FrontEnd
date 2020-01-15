@@ -1,41 +1,13 @@
-import axios from 'axios';
+/* // Listen on a specific host via the HOST environment variable
+var host = process.env.HOST || 'htpp://localhost';
+// Listen on a specific port via the PORT environment variable
+var port = process.env.PORT || 8000;
 
-/*
-*   Example usage for GET:
-*   ApiHelper
-*       .get("/users")
-*       .then(users => {
-*            console.log(users)
-*        })
-*        .catch(error => {
-*            console.log(error);
-*        })
-*
-*   Example usage for POST:
-*   ApiHelper
-*       .post("/createUser", user)
-*       .then(user => {
-*            console.log(user)
-*        })
-*        .catch(error => {
-*            console.log(error);
-*        })
-*/
-export default {
-    get: (route) => (
-        axios({
-            method: "get",
-            url: protocol + host + port + route
-        })
-    ),
-    post: (route, body) => (
-        axios({
-            method: "post",
-            url: protocol + host + port + route,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            data: body
-        })
-    )
-}
+var cors_proxy = require('cors-anywhere');
+cors_proxy.createServer({
+    originWhitelist: [], // Allow all origins
+    requireHeader: ['origin', 'x-requested-with'],
+    removeHeaders: ['cookie', 'cookie2']
+}).listen(port, host, function() {
+    console.log('Running CORS Anywhere on ' + host + ':' + port);
+}); */

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import './mapView.css';
-import axios from 'axios';
 
 class MapView extends Component {
     state = {
